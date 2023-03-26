@@ -25,6 +25,9 @@ function onInputChange(event) {
   event.preventDefault();
   const countryName = event.target.value.trim();
   console.log(countryName);
+  listCountry.innerHTML = '';
+  cardCountry.innerHTML = '';
+  
   if (countryName) {
     fetchCountries(countryName)
       .then(createMarkupList)
